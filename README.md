@@ -16,6 +16,8 @@ gcloud container clusters create cluster0
 
 ### Create an Autoscaling GCE Instance Group
 
+Instances leverage the Google Container VM and the Kubernetes Kubelet to start applications from Pod manifests.
+
 ```
 gcloud compute addresses create nginx
 ```
