@@ -2,6 +2,10 @@
 
 Convert Google Compute Engine (GCE) autoscaling instance groups to Kubernetes autoscaling deployments.
 
+## Install
+
+Download the latest release from the [releases page](https://github.com/kelseyhightower/krane/releases).
+
 ## Usage
 
 ### Create a Kubernetes cluster
