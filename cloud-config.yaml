@@ -1,0 +1,22 @@
+#cloud-config
+
+runcmd:
+  - "systemctl enable kubelet"
+  - "systemctl start kubelet"
+  - "iptables -A INPUT -p tcp --dport 80 -j ACCEPT"
+write_files:
+- path: /etc/kubernetes/manifests/nginx.yaml
+  permissions: 0644
+  owner: root
+  content: |
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      labels:
+        name: nginx
+      name: nginx
+    spec:
+      hostNetwork: true
+      containers:
+        - name: nginx
+          image: nginx:1.10
