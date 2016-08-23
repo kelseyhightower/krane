@@ -2,6 +2,10 @@
 
 Convert Google Compute Engine (GCE) autoscaling instance groups to Kubernetes autoscaling deployments.
 
+## Status
+
+Proof of concept.
+
 ## Install
 
 Download the latest release from the [releases page](https://github.com/kelseyhightower/krane/releases).
@@ -16,7 +20,7 @@ gcloud container clusters create cluster0
 
 ### Create an Autoscaling GCE Instance Group
 
-Instances leverage the Google Container VM and the Kubernetes Kubelet to start applications from Pod manifests.
+Instances will leverage the Google Container VM and the Kubernetes Kubelet to start applications from Pod manifests. See the cloud-config.yaml for more details.
 
 ```
 gcloud compute addresses create nginx
